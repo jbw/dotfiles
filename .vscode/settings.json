@@ -1,0 +1,67 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.visible": false,
+    "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": 0,
+    "editor.fontFamily": "Fira Code, Roboto Mono, Droid Sans Mono, Space Mono, monospace",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "editor.autoIndent": true,
+    "editor.renderWhitespace": "all",
+    "eslint.autoFixOnSave": true,
+    "tslint.jsEnable": false,
+    "tslint.autoFixOnSave": true,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors": {
+        "normal": "#268bd2",
+        "insert": "#d33682",
+        "visual": "#268bd2",
+        "visualline": "#2aa198",
+        "visualblock": "#859900",
+        "replace": "#b58900"
+    },
+    "vim.useCtrlKeys": true,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ":"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.showCommands",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#268bd2",
+        "statusBar.noFolderBackground": "#268bd2",
+        "statusBar.debuggingBackground": "#268bd2"
+    }
+}
