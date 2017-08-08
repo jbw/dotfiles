@@ -6,7 +6,7 @@
     "workbench.activityBar.visible": false,
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 0,
-    "editor.fontFamily": "Fira Code, Roboto Mono, Droid Sans Mono, Space Mono, monospace",
+    "editor.fontFamily": "Fira Code, Roboto Mono, Droid Sans Mono, Space Mono, Consolas, Menlo, Monanco, monospace",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
     "editor.autoIndent": true,
