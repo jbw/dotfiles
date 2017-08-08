@@ -1,17 +1,17 @@
-## Extensions
+# Extensions
 
-# JS
-* eslint
+## JS
+* eslint (dbaeumer.vscode-eslint)
 
-# Typescript
-* tslint
+## Typescript
+* tslint (eg2.tslint)
 
-# .Net
+## .Net
 * C# (ms-vscode.csharp)
 * NuGet Package Manager (jmrog.vscode-nuget-package-manager)
 
-# Extras
-* vscodevim
-* dracula theme (dracula-theme.theme-dracula)
-
-* vscode-icons
+## Extras
+* Vim (vscodevim.vim)
+* Dracula Theme (dracula-theme.theme-dracula)
+* vscode-icons (robertohuertasm.vscode-icons)
+* Git Lens (eamodio.gitlens)
