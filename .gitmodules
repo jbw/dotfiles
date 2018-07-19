@@ -1,0 +1,3 @@
+[submodule "config/themes/zsh"]
+	path = config/themes/zsh
+	url = https://github.com/dracula/zsh.git
