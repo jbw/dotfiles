@@ -1,2 +1,4 @@
 # dotfiles
-:laptop: configs :cake:
+:computer:: configs 
+
+:rice:
