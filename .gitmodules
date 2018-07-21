@@ -1,3 +1,6 @@
-[submodule "config/themes/zsh"]
-	path = config/themes/zsh
+[submodule "themes/zsh"]
+	path = config/themes/dracula
 	url = https://github.com/dracula/zsh.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
