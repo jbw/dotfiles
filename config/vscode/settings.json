@@ -6,7 +6,7 @@
     "workbench.activityBar.visible": false,
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 0,
-    "editor.fontFamily": "Fira Code, Roboto Mono, Droid Sans Mono, Space Mono, Consolas, Menlo, Monanco, monospace",
+    "editor.fontFamily": "SpaceMono Nerd Font, Fira Code, Roboto Mono, Droid Sans Mono, Consolas, Menlo, Monanco, monospace",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
     "editor.autoIndent": true,
@@ -15,6 +15,7 @@
     "eslint.autoFixOnSave": true,
     "tslint.jsEnable": false,
     "tslint.autoFixOnSave": true,
+    "python.pythonPath": "~/anaconda3/envs/py3.5/bin/python",
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.statusBarColorControl": true,
     "vim.statusBarColors": {
