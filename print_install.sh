@@ -1,5 +1,5 @@
 
-files=($(find . -maxdepth 1 -type f -not -path '*/\.*' ! -path './make.sh' ! -path './README.md' ! -path './install.sh' -printf "%f\n"))
+files=($(find . -maxdepth 1 -type f -not -path '*/\.*' ! -path './make.sh' ! -path './README.md' ! -path './print_install.sh' ! -path './install.sh' -printf "%f\n"))
 directories=($(find . -maxdepth 1 -type d -not -path '*/\.*' ! -path . ! -path './zsh' ! -path './config' -printf "%f\n"))
 
 for f in "${files[@]}"
