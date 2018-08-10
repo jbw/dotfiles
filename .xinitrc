@@ -36,7 +36,5 @@ source /etc/profile.d/vte.sh
 # desktop
 i3 &
 nitrogen --restore &
-xfce4-panel & redshift-gtk &
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
+polybar left & polybar right &
 exec compton --xrender-sync --xrender-sync-fence

@@ -1,0 +1,58 @@
+[options]
+scroll_on_output        = true
+scroll_on_keystroke     = true
+audible_bell            = true
+mouse_autohide          = false
+allow_bold              = false
+dynamic_title           = true
+urgent_on_bell          = true
+clickable_url           = true
+font                    = SpaceMono Nerd Font 12
+scrollback_lines        = -1
+search_wrap             = true
+cursor_blink            = true
+cursor_shape            = block
+
+# $BROWSER used by default
+#browser = chromium
+
+[colors]
+# special
+foreground      = #f0efff
+foreground_bold = #fff0ff
+cursor          = #d4d6d7
+background      = rgba(45, 42, 60, 0.99)
+
+# black
+color0  = #594e71
+color8  = #594e71
+
+# red
+color1  = #ff7e7e
+color9  = #ff7e7e
+
+# green
+color2  = #dcffaf
+color10 = #dcffaf
+
+# yellow
+color3  = #fff7af
+color11 = #fff7af
+
+# blue
+color4  = #afd3ff
+color12 = #afd3ff
+
+# magenta
+color5  = #fea6fd
+color13 = #fea6fd
+
+# cyan
+color6  = #affaff
+color14 = #affaff
+
+# white
+color7  = #ffffff
+color15 = #f0efff
+
+# vim: ft=dosini
