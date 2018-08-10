@@ -1,15 +1,15 @@
 
-files=($(find . -maxdepth 1 -type f -not -path '*/\.*' -printf "%f\n"))
+files=($(find . -maxdepth 1 -type f -not -path '*/\.*' ! -path './make.sh' -printf "%f\n"))
 directories=($(find . -maxdepth 1 -type d -not -path '*/\.*' ! -path . -printf "%f\n"))
 
 for f in "${files[@]}"
 do
-   echo "ln -s $(pwd)/$f ~/$f"
+   echo "ln -s $(pwd)/$f ~/.$f"
 done
 
 for d in "${directories[@]}"
 do
-    echo "ln -s $(pwd)/$d ~/$d"
+    echo "ln -s $(pwd)/$d ~/.$d"
 done
 
 #Install themes
