@@ -4,12 +4,12 @@ directories=($(find . -maxdepth 1 -type d -not -path '*/\.*' ! -path . ! -path '
 
 for f in "${files[@]}"
 do
-    echo "ln -sf $(pwd)/$f ~/.$f"
+    echo "ln -sfn $(pwd)/$f ~/.$f"
 done
 
 for d in "${directories[@]}"
 do
-    echo "ln -sf $(pwd)/$d ~/.$d"
+    echo "ln -sfn $(pwd)/$d ~/.$d"
 done
 
 files=($(find ./config -maxdepth 1 -type f -printf "%f\n"))
@@ -17,14 +17,14 @@ directories=($(find ./config -maxdepth 1 ! -path . -type d -printf "%f\n"))
 
 for f in "${files[@]}"
 do
-    echo "ln -sf $(pwd)/config/$f ~/.config/$f"
+    echo "ln -sfn $(pwd)/config/$f ~/.config/$f"
 done
 
 for d in "${directories[@]}"
 do
-    echo "ln -sf $(pwd)/config/$d ~/.config/$d"
+    echo "ln -sfn $(pwd)/config/$d ~/.config/$d"
 done
 
 #Install themes
-echo "ln -sf $(pwd)/zsh/dracula.zsh-theme ./oh-my-zsh/themes/dracula.zsh-theme"
+echo "ln -sfn $(pwd)/zsh/dracula.zsh-theme ./oh-my-zsh/themes/dracula.zsh-theme"
 
