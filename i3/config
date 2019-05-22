@@ -44,7 +44,7 @@ gaps outer 18
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+t exec termite
+bindsym $mod+t exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill

@@ -10,7 +10,7 @@ arc-blue    = #afd3ff
 [template/bar]
 #enable-ipc = true
 width = 100%
-height = 40
+height = 60
 offset-x = 0
 offset-y = 0
 
@@ -46,6 +46,12 @@ modules-left = i3
 modules-center = date eth
 modules-right = arrow1 temperature memory cpu filesystem padding volume powermenu
 
+[bar/left]
+inherit = template/bar
+monitor = DVI-D-0
+modules-left = i3
+modules-center = date eth
+modules-right = arrow1 temperature memory cpu filesystem padding volume powermenu
 ;-------------------------------------------------
 ;                                                ;
 ;              PADDING PARAMETERS                ;

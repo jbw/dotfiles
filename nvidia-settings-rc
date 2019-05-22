@@ -2,7 +2,7 @@
 # /home/cupcake/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Fri Aug  3 21:38:00 2018
+# Generated on Sat May 18 13:04:31 2019
 #
 
 # ConfigProperties:
@@ -29,6 +29,16 @@ Timer = Memory_Used_(GPU_0),Yes,3000
 0/LogAnisoAppControlled=1
 0/OpenGLImageSettings=1
 0/FSAAAppEnhanced=0
+0/ShowGraphicsVisualIndicator=0
+0/RedBrightness=0.000000
+0/GreenBrightness=0.000000
+0/BlueBrightness=0.000000
+0/RedContrast=0.000000
+0/GreenContrast=0.000000
+0/BlueContrast=0.000000
+0/RedGamma=1.000000
+0/GreenGamma=1.000000
+0/BlueGamma=1.000000
 [DPY:DVI-I-0]/Dithering=0
 [DPY:DVI-I-0]/DitheringMode=0
 [DPY:DVI-I-0]/DitheringDepth=0
@@ -36,6 +46,7 @@ Timer = Memory_Used_(GPU_0),Yes,3000
 [DPY:DVI-I-1]/Dithering=0
 [DPY:DVI-I-1]/DitheringMode=0
 [DPY:DVI-I-1]/DitheringDepth=0
+[DPY:DVI-I-1]/DigitalVibrance=0
 [DPY:DVI-I-1]/ColorSpace=0
 [DPY:DVI-I-1]/ColorRange=0
 [DPY:DVI-I-1]/SynchronousPaletteUpdates=0
@@ -57,15 +68,6 @@ Timer = Memory_Used_(GPU_0),Yes,3000
 [DPY:DP-1]/ColorSpace=0
 [DPY:DP-1]/ColorRange=0
 [DPY:DP-1]/SynchronousPaletteUpdates=0
-[DPY:DVI-D-0]/RedBrightness=0.000000
-[DPY:DVI-D-0]/GreenBrightness=0.000000
-[DPY:DVI-D-0]/BlueBrightness=0.000000
-[DPY:DVI-D-0]/RedContrast=0.000000
-[DPY:DVI-D-0]/GreenContrast=0.000000
-[DPY:DVI-D-0]/BlueContrast=0.000000
-[DPY:DVI-D-0]/RedGamma=1.000000
-[DPY:DVI-D-0]/GreenGamma=1.000000
-[DPY:DVI-D-0]/BlueGamma=1.000000
 [DPY:DVI-D-0]/Dithering=0
 [DPY:DVI-D-0]/DitheringMode=0
 [DPY:DVI-D-0]/DitheringDepth=0
