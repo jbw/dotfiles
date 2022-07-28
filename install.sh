@@ -21,9 +21,9 @@
     else
       echo "Installing Nix Darwin..."
       nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer --out-link /tmp/nix-darwin
-      /tmp/nix-darwin/bin/darwin-installer
-
       sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.backup-before-nix-darwin
+      printf "n\ny\ny\ny\ny" | /tmp/nix-darwin/bin/darwin-installer
+
     fi
   }
 
