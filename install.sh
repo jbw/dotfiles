@@ -26,9 +26,11 @@
     repository="https://github.com/jbw/dotfiles.git"
     target="$HOME/.nixpkgs"
 
-    if $JBW_DOTFILES_FRESH_CONFIG_INSTALL; then
-      echo "Installing configs from fresh..."
-      rm -rf "$target"
+    if [ ! -z ${JBW_DOTFILES_FRESH_CONFIG_INSTALL+x} ]; then
+      if [ "$JBW_DOTFILES_FRESH_CONFIG_INSTALL" == "true" ]; then
+        echo "Installing configs from fresh..."
+        rm -rf "$target"
+      fi
     fi
 
     if cat "$target/.git/config" &>/dev/null; then
