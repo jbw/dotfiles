@@ -8,6 +8,10 @@
     else
       echo "Installing Nix..."
       curl -L https://nixos.org/nix/install | bash
+
+      # Update local shell
+      source /etc/zshrc
+
     fi
   }
 
@@ -16,7 +20,8 @@
       echo "Already installed Nix Darwin."
     else
       echo "Installing Nix Darwin..."
-      nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer ./result/bin/darwin-installer
+      nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer --out-link /tmp/nix-darwin
+      /tmp/nix-darwin/bin/darwin-installer
 
       sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.backup-before-nix-darwin
     fi
