@@ -1,8 +1,0 @@
-[Added Associations]
-image/png=eog.desktop;
-image/jpeg=eog.desktop;
-video/mp4=mplayer.desktop;
-video/x-matroska=vlc.desktop;
-x-scheme-handler/http=exo-web-browser.desktop
-x-scheme-handler/https=exo-web-browser.desktop
-text/plain=org.gnome.gedit.desktop;visual-studio-code.desktop;
