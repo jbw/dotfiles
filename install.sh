@@ -10,7 +10,8 @@
       printf n\ny\ny\ny\ny | sh <(curl -L https://nixos.org/nix/install) --daemon
 
       # Update local shell
-      source /etc/zshrc
+      source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
+
     fi
   }
 
@@ -49,7 +50,7 @@
     echo "Building..."
 
     # Update local shell
-    source /etc/zshrc
+    source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
 
     export NIX_PATH=$HOME/.nix-defexpr/channels:$NIX_PATH
     darwin-rebuild switch -I "darwin-config=$HOME/.nixpkgs/darwin-configuration.nix"
