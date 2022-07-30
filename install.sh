@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 {
   set -euo pipefail
 
@@ -7,11 +7,10 @@
       echo "Already installed Nix."
     else
       echo "Installing Nix..."
-      curl -L https://nixos.org/nix/install | bash
+      printf n\ny\ny\ny\ny | sh <(curl -L https://nixos.org/nix/install) --daemon
 
       # Update local shell
       source /etc/zshrc
-
     fi
   }
 
@@ -23,7 +22,6 @@
       nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer --out-link /tmp/nix-darwin
       sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.backup-before-nix-darwin
       printf "n\ny\ny\ny\ny" | /tmp/nix-darwin/bin/darwin-installer
-
     fi
   }
 
