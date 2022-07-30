@@ -50,8 +50,9 @@
     echo "Building..."
 
     # Update local shell
-    source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
-
+    set +u
+    source /etc/static/bashrc
+    set -u
     export NIX_PATH=$HOME/.nix-defexpr/channels:$NIX_PATH
     darwin-rebuild switch -I "darwin-config=$HOME/.nixpkgs/darwin-configuration.nix"
   }
