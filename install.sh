@@ -40,7 +40,9 @@
       printf n\ny\ny\ny\ny | sh <(curl -L https://nixos.org/nix/install) --daemon
 
       # Update local shell
+      set +u
       source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+      set -u
       nix-shell -p nix-info --run "nix-info -m"
     fi
   }
