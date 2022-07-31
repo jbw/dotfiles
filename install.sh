@@ -2,6 +2,24 @@
 {
   set -euo pipefail
 
+  install_command_line_tools() {
+    # Unattended installation of Command Line Tools
+    # Found on apple.stackexchange.com at https://apple.stackexchange.com/questions/107307/how-can-i-install-the-command-line-tools-completely-from-the-command-line/195963#195963
+    # Homebrew uses a similar technique https://github.com/Homebrew/install/blob/878b5a18b89ff73f2f221392ecaabd03c1e69c3f/install#L297
+    xcode-select -p >/dev/null || {
+      touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+      CLT=$(softwareupdate -l |
+        grep "\*.*Command Line Tools" |
+        head -n 1 |
+        awk -F ":" '{print $2}' |
+        sed -e 's/^ *//' |
+        tr -d '\n')
+      softwareupdate -i "$CLT" --verbose
+      rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+    }
+    echo "Command Line Tools are installed at $(xcode-select -p)"
+  }
+
   install_nix() {
     if command -v nix &>/dev/null; then
       echo "Already installed Nix."
@@ -10,8 +28,8 @@
       printf n\ny\ny\ny\ny | sh <(curl -L https://nixos.org/nix/install) --daemon
 
       # Update local shell
-      source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
-
+      source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+      nix-shell -p nix-info --run "nix-info -m"
     fi
   }
 
@@ -57,6 +75,7 @@
     darwin-rebuild switch -I "darwin-config=$HOME/.nixpkgs/darwin-configuration.nix"
   }
 
+  install_command_line_tools
   install_nix
   install_nix_darwin
   install_my_configs
