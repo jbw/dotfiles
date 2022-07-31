@@ -50,6 +50,7 @@
       echo "Already installed Nix Darwin."
     else
       echo "Installing Nix Darwin..."
+
       nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer --out-link /tmp/nix-darwin
       sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.backup-before-nix-darwin
       printf "n\ny\ny\ny\ny" | /tmp/nix-darwin/bin/darwin-installer
@@ -78,7 +79,12 @@
 
   build() {
     echo "Building..."
-
+    for filename in shells bashrc zshrc; do
+      filepath="/etc/${filename}"
+      if [ -f "${filepath}" ] && [ ! -L "${filepath}" ]; then
+        sudo mv "${filepath}" "${filepath}.backup-before-nix-darwin"
+      fi
+    done
     # Update local shell
     set +u
     source /etc/static/bashrc
