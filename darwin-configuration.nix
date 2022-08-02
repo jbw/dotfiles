@@ -11,11 +11,11 @@ in {
 
   programs.zsh.enable = true;
 
-  home-manager = {
-    users.${me} = import ./home;
-    useGlobalPkgs = true;
-    useUserPackages = false;
-  };
+  # home-manager = {
+  #   users.${me} = import ./home;
+  #   useGlobalPkgs = true;
+  #   useUserPackages = false;
+  # };
 
   services.nix-daemon.enable = true;
   nix.useDaemon = true;
