@@ -2,11 +2,13 @@
 
 let shellAliases = { cat = "bat"; };
 in {
-  home.packages = with pkgs; [ fzf zoxide ];
+  home.packages = with pkgs; [
+    fzf # fuzzy matches
+    zoxide # better cd
+  ];
 
   programs.zoxide = {
     enable = true;
-    options = [ "--cmd j" ];
     enableBashIntegration = true;
     enableFishIntegration = true;
     enableZshIntegration = true;
