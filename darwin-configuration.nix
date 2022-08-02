@@ -2,7 +2,7 @@
 
 let me = "jbw";
 in {
-  imports = [ ./darwin <home-manager/nix-darwin> ];
+  imports = [ ./darwin ];
 
   users.users.${me} = {
     home = "/Users/${me}";
