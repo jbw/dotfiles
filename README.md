@@ -4,6 +4,24 @@
 
 :warning:
 
+### Step 1
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/nix-darwin/install_nix.sh | bash
 ```
-curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/nix-darwin/install.sh | bash
+
+### Step 2
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/nix-darwin/install_configs.sh | bash
+```
+
+## Manual Steps
+
+### home-manager
+
+```
+nix-channel --add https://github.com/rycee/home-manager/archive/master.tar.gz home-manager
+
+nix-channel --update --verbose
 ```

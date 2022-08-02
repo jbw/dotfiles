@@ -4,6 +4,9 @@
   imports = [ ./shell.nix ];
 
   home.packages = with pkgs; [
+
+    home-manager # system package manager
+
     glow # markdown preview
 
     # CLI tools
@@ -26,6 +29,7 @@
     rustup
     go
 
-    home-manager # system package manager
   ];
+
+  home.stateVersion = "20.09";
 }
