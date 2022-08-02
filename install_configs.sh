@@ -47,17 +47,22 @@
   }
 
   build() {
+
     echo "Building..."
+
     for filename in shells bashrc zshrc; do
       filepath="/etc/${filename}"
       if [ -f "${filepath}" ] && [ ! -L "${filepath}" ]; then
         sudo mv "${filepath}" "${filepath}.backup-before-nix-darwin"
       fi
     done
+
     # Update local shell
     set +u
     source /etc/static/bashrc
     set -u
+
+    # Rebuild
     export NIX_PATH=$HOME/.nix-defexpr/channels:$NIX_PATH
     darwin-rebuild switch -I "darwin-config=$HOME/.nixpkgs/darwin-configuration.nix"
   }
