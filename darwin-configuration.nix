@@ -4,7 +4,7 @@ let me = "jbw";
 in {
   imports = [ ./darwin <home-manager/nix-darwin> ];
 
-  users.users.${mainUser} = {
+  users.users.${me} = {
     home = "/Users/${me}";
     shell = pkgs.zsh;
   };
