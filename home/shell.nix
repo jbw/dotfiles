@@ -11,4 +11,7 @@ in {
     enableCompletion = true;
     history.extended = true;
   };
+
+  programs.starship = { enable = true; };
+
 }
