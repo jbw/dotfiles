@@ -2,9 +2,9 @@
 
 let me = "jbw";
 in {
-  imports = [ ./darwin ];
+  imports = [ ./darwin <home-manager/nix-darwin> ];
 
-  environment.systemPackages = [ pkgs.starship ];
+  environment.systemPackages = with pkgs; [ home-manager starship ];
 
   users.users.${me} = {
     home = "/Users/${me}";
@@ -13,11 +13,11 @@ in {
 
   programs.zsh.enable = true;
 
-  # home-manager = {
-  #   users.${me} = import ./home;
-  #   useGlobalPkgs = true;
-  #   useUserPackages = false;
-  # };
+  home-manager = {
+    users.${me} = import ./home;
+    useGlobalPkgs = true;
+    useUserPackages = false;
+  };
 
   services.nix-daemon.enable = true;
   nix.useDaemon = true;
