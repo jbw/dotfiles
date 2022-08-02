@@ -4,6 +4,8 @@ let me = "jbw";
 in {
   imports = [ ./darwin ];
 
+  environment.systemPackages = [ pkgs.starship ];
+
   users.users.${me} = {
     home = "/Users/${me}";
     shell = pkgs.zsh;

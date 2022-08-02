@@ -2,7 +2,7 @@
 
 let shellAliases = { cat = "bat"; };
 in {
-  home.packages = with pkgs; [ fzf zoxide starship ];
+  home.packages = with pkgs; [ fzf zoxide ];
 
   programs.zsh = {
     inherit shellAliases;
