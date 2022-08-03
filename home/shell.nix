@@ -69,7 +69,7 @@ in {
 
     initExtra = ""
       # Initialize homebrew
-      eval (/opt/homebrew/bin/brew shellenv)
+      eval "$(/opt/homebrew/bin/brew shellenv)"
 
       # Initialize fnm
       eval "$(fnm env --use-on-cd)" "";
