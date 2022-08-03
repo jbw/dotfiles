@@ -18,9 +18,11 @@ in {
     inherit shellAliases;
     enable = true;
 
-    shellInit = ''
+    initExtra = ''
+    
       # Initialize homebrew
       eval $(/opt/homebrew/bin/brew shellenv)
+
     '';
 
     enableAutosuggestions = true;
