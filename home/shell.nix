@@ -17,10 +17,10 @@ in {
   programs.zsh = {
     inherit shellAliases;
     enable = true;
-    
+
     shellInit = ''
       # Initialize homebrew
-      eval (/opt/homebrew/bin/brew shellenv)
+      eval $(/opt/homebrew/bin/brew shellenv)
     '';
 
     enableAutosuggestions = true;
