@@ -17,6 +17,12 @@ in {
   programs.zsh = {
     inherit shellAliases;
     enable = true;
+    
+    shellInit = ''
+      # Initialize homebrew
+      eval (/opt/homebrew/bin/brew shellenv)
+    '';
+
     enableAutosuggestions = true;
     enableCompletion = true;
     history.extended = true;
