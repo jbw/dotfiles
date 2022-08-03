@@ -67,12 +67,14 @@ in {
     inherit shellAliases;
     enable = true;
 
-    initExtra = ""
+    initExtra = ''
       # Initialize homebrew
       eval "$(/opt/homebrew/bin/brew shellenv)"
 
       # Initialize fnm
-      eval "$(fnm env --use-on-cd)" "";
+      eval "$(fnm env --use-on-cd)"
+
+    '';
 
     enableAutosuggestions = true;
     enableCompletion = true;
