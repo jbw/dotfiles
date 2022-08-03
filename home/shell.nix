@@ -19,10 +19,8 @@ in {
     enable = true;
 
     initExtra = ''
-    
       # Initialize homebrew
       eval $(/opt/homebrew/bin/brew shellenv)
-
     '';
 
     enableAutosuggestions = true;
