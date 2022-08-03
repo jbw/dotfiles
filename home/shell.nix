@@ -27,9 +27,9 @@ let
     gcf = "git commit --fixup";
     gco = "git checkout";
     gcob = "git checkout -b";
-    gcom = "git checkout master";
-    gcos = "git checkout staging";
-    gcod = "git checkout develop";
+    gcom = "git checkout main";
+    gcoa = "git checkout alpha";
+    gcob = "git checkout beta";
     gd = "git diff";
     gda = "git diff HEAD";
     gi = "git init";
