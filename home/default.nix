@@ -24,10 +24,11 @@
     bottom # better `top`
     tealdeer # rust implementation of `tldr`
 
-    # Languages
+    # Development tools
     yarn
     rustup
     go
+    fnm
 
   ];
 
