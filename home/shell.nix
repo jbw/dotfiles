@@ -2,7 +2,7 @@
 
 let
   shellAliases = {
-    cat = "bat";
+    cat = "bat --style=plain";
     ls = "exa";
 
     ll = "ls -la";
@@ -97,13 +97,13 @@ in {
         style = "bold blue";
       };
       hostname = {
-        format = " $symbol$hostname ";
-        symbol = "🌍 ";
-        style = "bold green";
+        ssh_only = false;
+        format = "<[$hostname]($style)>";
+        trim_at = "-";
+        style = "bold dimmed white";
+        disabled = true;
       };
       git_commit = {
-        format = " $symbol$commit ";
-        symbol = "📝 ";
         commit_hash_length = 8;
         style = "bold white";
       };
