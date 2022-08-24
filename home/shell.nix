@@ -78,5 +78,35 @@ in {
     history.extended = true;
   };
 
-  programs.starship = { enable = true; };
+  programs.starship = {
+    enable = true;
+    settings = {
+      battery = {
+        full_symbol = "🔋";
+        charging_symbol = "🔌";
+        discharging_symbol = "⚡";
+      };
+      git_branch = {
+        format = " [$symbol$branch]($style) ";
+        symbol = "🍣 ";
+        style = "bold yellow";
+      };
+      git_status = {
+        format = " $symbol$status ";
+        symbol = "📦 ";
+        style = "bold blue";
+      };
+      git_branch = {
+        format = " [$symbol$branch]($style) ";
+        symbol = "🍣 ";
+        style = "bold yellow";
+      };
+      git_commit = {
+        format = " $symbol$commit ";
+        symbol = "📝 ";
+        commit_hash_length = 8;
+        style = "bold white";
+      };
+    };
+  };
 }
