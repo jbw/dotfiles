@@ -7,13 +7,13 @@
 ### Step 1
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/nix-darwin/install_nix.sh | bash
+curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/main/install_nix.sh | bash
 ```
 
 ### Step 2
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/nix-darwin/install_configs.sh | bash
+curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/main/install_configs.sh | bash
 ```
 
 ## Manual Steps
