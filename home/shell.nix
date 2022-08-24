@@ -92,9 +92,18 @@ in {
         style = "bold yellow";
       };
       git_status = {
-        format = " $symbol$status ";
-        symbol = "📦 ";
-        style = "bold blue";
+        conflicted = "⚔️ ";
+        ahead = "🏎️ 💨 ×${count}";
+        behind = "🐢 ×${count}";
+        diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}";
+        untracked = "🛤️  ×${count}";
+        stashed = "📦 ";
+        modified = "📝 ×${count}";
+        staged = "🗃️  ×${count}";
+        renamed = "📛 ×${count}";
+        deleted = "🗑️  ×${count}";
+        style = "bright-white";
+        format = "$all_status$ahead_behind";
       };
       hostname = {
         ssh_only = false;
