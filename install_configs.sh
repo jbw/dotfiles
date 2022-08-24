@@ -34,6 +34,8 @@
       if [ "$JBW_DOTFILES_FRESH_CONFIG_INSTALL" == "true" ]; then
         echo "Installing configs from fresh..."
         rm -rf "$target"
+        git clone -b "nix-darwin" "$repository" "$target"
+        return
       fi
     fi
 
