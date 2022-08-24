@@ -96,10 +96,10 @@ in {
         symbol = "📦 ";
         style = "bold blue";
       };
-      git_branch = {
-        format = " [$symbol$branch]($style) ";
-        symbol = "🍣 ";
-        style = "bold yellow";
+      hostname = {
+        format = " $symbol$hostname ";
+        symbol = "🌍 ";
+        style = "bold green";
       };
       git_commit = {
         format = " $symbol$commit ";
