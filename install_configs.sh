@@ -33,7 +33,8 @@
     if [ ! -z ${JBW_DOTFILES_FRESH_CONFIG_INSTALL+x} ]; then
       if [ "$JBW_DOTFILES_FRESH_CONFIG_INSTALL" == "true" ]; then
         echo "Installing configs from fresh..."
-        rm -rf "$target"/* "$target"/.*
+        rm -rf "$target"
+        mkdir -p "$target"
         git clone -b "main" "$repository" "$target"
         return
       fi
