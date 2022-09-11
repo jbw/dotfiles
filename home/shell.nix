@@ -73,7 +73,7 @@ in {
       eval "$(fnm env --use-on-cd)"
 
       # Set editor
-      set -x EDITOR vim
+      # set -x EDITOR vim
 
       # export .local/bin
       # . "$HOME/.local/bin:$PATH"
