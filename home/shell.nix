@@ -76,7 +76,7 @@ in {
       set -x EDITOR vim
 
       # export .local/bin
-      export PATH="$HOME/.local/bin:$PATH"
+      . "$HOME/.local/bin:$PATH"
 
     '';
 
