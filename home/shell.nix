@@ -15,6 +15,7 @@ let
     tree = "exa --tree";
 
     # Git 
+    git = "hub";
     # "https://jonsuh.com/blog/git-command-line-shortcuts/"
     ga = "git add";
     gaa = "git add .";
@@ -60,13 +61,6 @@ in {
     enableZshIntegration = true;
   };
 
-  programs.git = {
-    enable = true;
-    userName = "jbw";
-    userEmail = "hi@jbw.codes";
-    diff-so-fancy.enable = true;
-  };
-
   programs.zsh = {
     inherit shellAliases;
     enable = true;
@@ -77,6 +71,9 @@ in {
 
       # Initialize fnm
       eval "$(fnm env --use-on-cd)"
+
+      # Set editor
+      set - x EDITOR lvim
 
     '';
 
