@@ -9,10 +9,10 @@
     userEmail = "hi@jbw.codes";
     package = pkgs.gitAndTools.gitFull;
 
-    signing = {
-      key = "780C95C86BF169E4E7D8665E01D4B591C43BE629";
-      signByDefault = true;
-    };
+    # signing = {
+    #   key = "";
+    #   signByDefault = true;
+    # };
 
     ignores = [
       ".cache/"

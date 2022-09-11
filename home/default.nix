@@ -10,6 +10,7 @@
       hub # git wrapper
       glow # markdown preview
       tokei # code statistics
+      neovim # text editor
 
       # CLI tools
       bat # better `cat`
