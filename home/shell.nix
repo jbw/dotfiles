@@ -73,7 +73,7 @@ in {
       eval "$(fnm env --use-on-cd)"
 
       # Set editor
-      set - x EDITOR lvim
+      set - x EDITOR vim
 
     '';
 

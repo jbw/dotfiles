@@ -43,7 +43,7 @@
       push.default = "current";
 
       core = {
-        editor = "lvim";
+        editor = "vim";
         pager = "diff-so-fancy | less --tabs=4 -RFX";
       };
 
