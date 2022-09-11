@@ -60,6 +60,13 @@ in {
     enableZshIntegration = true;
   };
 
+  programs.git = {
+    enable = true;
+    userName = "jbw";
+    userEmail = "hi@jbw.codes";
+    diff-so-fancy.enable = true;
+  };
+
   programs.zsh = {
     inherit shellAliases;
     enable = true;

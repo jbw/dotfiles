@@ -23,6 +23,7 @@
     du-dust # better `du`
     bottom # better `top`
     tealdeer # rust implementation of `tldr`
+    diff-so-fancy # better `diff`
 
     # Development tools
     yarn
