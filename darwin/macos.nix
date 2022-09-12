@@ -14,5 +14,6 @@
   # Finder
   system.defaults.finder.CreateDesktop = false;
   system.defaults.NSGlobalDomain.AppleShowAllExtensions = true;
+  system.defaults.finder.AppleShowAllExtensions = true;
 
 }
