@@ -88,16 +88,71 @@ in {
   programs.starship = {
     enable = true;
     settings = {
+      add_newline = false;
+
+      nodejs = {
+        symbol = "⬢";
+        style = "bold green";
+      };
+
+      rust = {
+        symbol = "🦀";
+        style = "bold red";
+      };
+
+      python = {
+        symbol = "🐍";
+        style = "bold yellow";
+      };
+
+      docker_context = {
+        symbol = "🐳";
+        style = "bold blue";
+      };
+
+      golang = {
+        symbol = "🐹";
+        style = "bold cyan";
+      };
+
+      swift = {
+        symbol = "🐦";
+        style = "bold yellow";
+      };
+
+      kubernetes = {
+        symbol = "🐙";
+        style = "bold green";
+      };
+
+      terraform = {
+        symbol = "🏗";
+        style = "bold blue";
+      };
+
+      helm = {
+        symbol = "⛵";
+        style = "bold blue";
+      };
+
+      package = {
+        symbol = "📦";
+        style = "bold yellow";
+      };
+
       battery = {
         full_symbol = "🔋";
         charging_symbol = "🔌";
         discharging_symbol = "⚡";
+        display = [{ threshold = 25; }];
       };
+
       git_branch = {
         format = " [$symbol$branch]($style) ";
         symbol = "🍣 ";
         style = "bold yellow";
       };
+
       git_status = {
         conflicted = "⚔️ ";
         ahead = "🏎️ 💨 ×$count";
@@ -112,6 +167,12 @@ in {
         style = "bright-white";
         format = "$all_status$ahead_behind";
       };
+
+      git_commit = {
+        commit_hash_length = 8;
+        style = "bold white";
+      };
+
       hostname = {
         ssh_only = false;
         format = "<[$hostname]($style)>";
@@ -119,11 +180,26 @@ in {
         style = "bold dimmed white";
         disabled = true;
       };
-      git_commit = {
-        commit_hash_length = 8;
-        style = "bold white";
+
+      username = {
+        show_always = true;
+        format = "[$user]($style)@";
       };
+
+      username = {
+        style_root = ''
+          bold #e74a98
+        '';
+        style_user = "bold #b392f0";
+      };
+
+      directory = {
+        truncation_length = 8;
+        truncate_to_repo = true;
+        read_only = " 🔒";
+        style = "bold #61AFEF";
+      };
+
     };
   };
-
 }
