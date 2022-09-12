@@ -85,6 +85,11 @@ in {
     history.extended = true;
   };
 
+  programs.gpg = {
+    enable = true;
+    enableSshSupport = true;
+  };
+
   programs.starship = {
     enable = true;
     settings = {
