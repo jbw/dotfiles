@@ -87,7 +87,7 @@ in {
 
   programs.gpg = {
     enable = true;
-    enableSshSupport = true;
+
   };
 
   programs.starship = {
