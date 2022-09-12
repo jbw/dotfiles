@@ -135,6 +135,23 @@ in {
         style = "bold blue";
       };
 
+      aws = {
+        symbol = "🌎";
+        style = "bold yellow";
+        format = "on [$symbol$profile]($style) ";
+        region_aliases = {
+          "us-east-1" = "🇺🇸 va";
+          "us-east-2" = "🇺🇸 oh";
+          "us-west-1" = "🇺🇸 ca";
+          "us-west-2" = "🇺🇸 or";
+          "eu-central-1" = "🇩🇪";
+          "eu-west-1" = "🇮🇪";
+          "eu-west-2" = "🇬🇧";
+          "eu-west-3" = "🇫🇷";
+
+        };
+      };
+
       package = {
         symbol = "📦";
         style = "bold yellow";
