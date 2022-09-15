@@ -78,6 +78,13 @@ in {
       # export .local/bin
       export PATH="$HOME/.local/bin:$PATH"
 
+      # alt + arrow left/right bindings
+      bindkey '[C' forward-word
+      bindkey '[D' backward-word
+
+      # cmd + arrow left/right bindings
+      bindkey "^[[1;9D" beginning-of-line
+      bindkey "^[[1;9C" end-of-line
     '';
 
     enableAutosuggestions = true;
@@ -85,10 +92,7 @@ in {
     history.extended = true;
   };
 
-  programs.gpg = {
-    enable = true;
-
-  };
+  programs.gpg = { enable = true; };
 
   programs.starship = {
     enable = true;
