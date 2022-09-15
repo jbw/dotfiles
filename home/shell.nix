@@ -94,6 +94,101 @@ in {
 
   programs.gpg = { enable = true; };
 
+  programs.kitty = {
+    enable = true;
+    extraConfig = ''
+      # vim:fileencoding=utf-8:ft=conf
+
+      scrollback_lines 10000
+
+      # Colours
+      ## Special
+      background           #1f1b2a
+      foreground           #e9e9eb
+      cursor               #f783ac
+      selection_foreground #1a172e
+      selection_background #f783ac
+      ## Blacks
+      color0 #464669
+      color8 #50507a
+      ## Reds
+      color1 #ff5e5e
+      color9 #fb5858
+      ## Greens
+      color2  #abf160
+      color10 #c7fc91
+      ## Yellows
+      color3  #ffe066
+      color11 #ffeba5
+      ## Blues
+      color4  #9e89fd
+      color12 #b3b3ff
+      ## Magenta
+      color5  #f783ac
+      color13 #e599f7
+      ## Cyan
+      color6  #87edf3
+      color14 #a2f5f9
+      ## White
+      color7  #ffffff
+      color15 #e1e1e6
+
+      # Background
+      background_opacity 0.975
+
+      # Fonts
+      font_family Hasklig Semibold
+      italic_font Hasklig Semibold Italic
+      bold_font Hasklig Bold
+      bold_italic_font Hasklig Bold Italic
+      font_size 14
+      adjust_line_height 1
+
+      # Window
+      #os_window_class i3wmForceTile
+      remember_window_size no
+      initial_window_width 100c
+      initial_window_height 26c
+      window_padding_width 4
+
+      # OS title bar
+      wayland_titlebar_color system
+      macos_titlebar_color system
+
+      # Tab bar
+      bell_on_tab yes
+      tab_bar_edge bottom
+      tab_title_template {index}: {title}
+      tab_bar_style powerline
+      tab_powerline_style slanted
+      focus_follows_mouse no
+      active_tab_foreground #464669
+      active_tab_background #c2fa88
+      active_tab_font_style bold_italic
+      inactive_tab_foreground #444
+      inactive_tab_background #999
+      inactive_tab_font_style normal
+
+      # Key mappings
+      map shift+page_up scroll_page_up
+      map shift+page_down scroll_page_down
+      map ctrl+shift+t new_tab_with_cwd
+      map ctrl+shift+enter new_window_with_cwd
+
+      ## Search
+      map cmd+f launch --type=overlay --stdin-source=@screen_scrollback zsh -c "fzf --no-sort --no-mouse --exact -i --tac | kitty +kitten clipboard"
+      map cmd+/ launch --allow-remote-control kitty +kitten kitty_search/search.py @active-kitty-window-id
+
+      ## macos - make text skipping work with alt
+      map alt+left send_text all \x1b\x62
+      map alt+right send_text all \x1b\x66
+
+      ## tmux..ish binding
+      map ctrl+shift+z toggle_layout stack
+      map f1 toggle_layout stack
+
+    '';
+  };
   programs.starship = {
     enable = true;
     settings = {
