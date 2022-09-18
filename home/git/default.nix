@@ -9,6 +9,10 @@
     userEmail = "hi@jbw.codes";
     package = pkgs.gitAndTools.gitFull;
 
+    # work settings
+    user.work.name = "Jason Watson";
+    user.work.signingKey = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
+
     signing = {
       key = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
       signByDefault = true;
