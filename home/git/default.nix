@@ -38,6 +38,8 @@
       commit.template = builtins.toPath ./git-message;
       hub.protocol = "ssh";
 
+      github.user = "jbw";
+
       # If no upstream branch is specified, push to the branch with the same
       # name as the current branch
       push.default = "current";
