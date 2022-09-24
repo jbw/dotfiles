@@ -33,7 +33,7 @@
       l = "log --pretty=oneline -n 50 --graph --abbrev-commit";
       undo = "reset HEAD~1 --mixed";
       findcommit =
-        "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f";
+        "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short $1; }; f";
       findmessage =
         "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f";
     };

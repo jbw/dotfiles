@@ -32,7 +32,9 @@ let
     gda = "git diff HEAD";
     gi = "git init";
     glg = "git log --graph --oneline --decorate --all";
-    gld = "git log --pretty=format:';%h %ad %s'; --date=short --all";
+    gld =
+      "git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --all";
+    glf = "git log -p $1";
     gm = "git merge --no-ff";
     gma = "git merge --abort";
     gmc = "git merge --continue";
