@@ -17,6 +17,7 @@ in {
     enable = true;
 
     package = pkgs.gitAndTools.gitFull;
+    user.test.name = "Jason Watson";
 
     ignores = [
       ".cache/"
