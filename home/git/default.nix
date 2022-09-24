@@ -5,7 +5,13 @@ let
   gitIdentity =
     pkgs.writeShellScriptBin "git-identity" (builtins.readFile ./git-identity);
 in {
-  home.packages = with pkgs.gitAndTools; [ diff-so-fancy hub tig gh ];
+  home.packages = with pkgs.gitAndTools; [
+    gitIdentity
+    diff-so-fancy
+    hub
+    tig
+    gh
+  ];
 
   programs.git = {
     enable = true;
@@ -55,8 +61,8 @@ in {
       # personal settings
       user.personal.name = "Jason Watson";
       user.personal.email = "hi@jbw.codes";
-      # user.personal.signing.key = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
-      # user.personal.signing.signByDefault = true;
+      user.personal.signingKey = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
+      user.personal.signByDefault = true;
 
       # If no upstream branch is specified, push to the branch with the same
       # name as the current branch
