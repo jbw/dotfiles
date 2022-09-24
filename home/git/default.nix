@@ -1,22 +1,22 @@
 { config, pkgs, ... }:
 
-{
+let
+  # "https://pickard.cc/posts/git-identity-home-manager/"
+  gitIdentity =
+    pkgs.writeShellScriptBin "git-identity" (builtins.readFile ./git-identity);
+in {
   home.packages = with pkgs.gitAndTools; [ diff-so-fancy hub tig gh ];
 
   programs.git = {
     enable = true;
-    userName = "Jason Watson";
-    userEmail = "hi@jbw.codes";
+    # userName = "Jason Watson";
+    # userEmail = "hi@jbw.codes";
     package = pkgs.gitAndTools.gitFull;
 
-    # work settings
-    user.work.name = "Jason Watson";
-    user.work.signingKey = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
-
-    signing = {
-      key = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
-      signByDefault = true;
-    };
+    # signing = {
+    #   key = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
+    #   signByDefault = true;
+    # };
 
     ignores = [
       ".cache/"
@@ -36,6 +36,10 @@
         "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short $1; }; f";
       findmessage =
         "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f";
+
+      identity = "! git-identity";
+      id = "! git-identity";
+
     };
 
     extraConfig = {
@@ -43,6 +47,16 @@
       hub.protocol = "ssh";
 
       github.user = "jbw";
+
+      user.useConfigOnly = true;
+      # work settings
+      user.work.name = "Jason Watson";
+      user.work.signingKey = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
+      # personal settings
+      user.personal.name = "Jason Watson";
+      user.personal.email = "hi@jbw.codes";
+      user.personal.signing.key = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
+      user.personal.signing.signByDefault = true;
 
       # If no upstream branch is specified, push to the branch with the same
       # name as the current branch
