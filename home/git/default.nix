@@ -17,7 +17,6 @@ in {
     enable = true;
 
     package = pkgs.gitAndTools.gitFull;
-    user.test.name = "Jason Watson";
 
     ignores = [
       ".cache/"
@@ -51,15 +50,15 @@ in {
 
       user.useConfigOnly = true;
 
-      # work settings
-      user.work.name = "Jason Watson";
-      user.work.signingKey = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
-
       # personal settings
       user.personal.name = "Jason Watson";
       user.personal.email = "hi@jbw.codes";
       user.personal.signingKey = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
       user.personal.signByDefault = true;
+
+      # work settings
+      user.work.name = "Jason Watson";
+      user.work.signingKey = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
 
       # If no upstream branch is specified, push to the branch with the same
       # name as the current branch
