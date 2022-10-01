@@ -58,7 +58,9 @@ in {
 
       # work settings
       user.work.name = "Jason Watson";
+      # user.work.email = "";
       user.work.signingKey = "7987BDD467C8A6471C0603F8274A76F3F8E95079";
+      user.work.signByDefault = true;
 
       # If no upstream branch is specified, push to the branch with the same
       # name as the current branch
