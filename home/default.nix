@@ -34,6 +34,7 @@
       rustup
       go
       fnm
+      node
 
     ] ++ (with nodePackages; [
       # NPM Packages
