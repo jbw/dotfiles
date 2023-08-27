@@ -48,7 +48,7 @@
       git clone -b "main" "$repository" "$target"
     fi
   }
-
+  
   build() {
 
     echo "Building..."
@@ -69,9 +69,23 @@
     export NIX_PATH=$HOME/.nix-defexpr/channels:$NIX_PATH
     darwin-rebuild switch -I "darwin-config=$HOME/.nixpkgs/darwin-configuration.nix"
   }
+  
+  install_homebrew() {
+    command -v brew || {
+      printf "\n" | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    }
+  }
+
+  install_home_manager() {
+    nix-channel --list | grep -q home-manager || {
+      nix-channel --add https://github.com/nix-community/home-manager/archive/refs/heads/release-22.09.tar.gz home-manager
+      nix-channel --update
+   }
+  }
 
   sudo_prompt
   install_nix_darwin
+  install_home_manager
   install_my_configs
   build
 }

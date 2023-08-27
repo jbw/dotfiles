@@ -21,7 +21,7 @@ curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/main/install_configs.s
 ### home-manager
 
 ```
-nix-channel --add https://github.com/rycee/home-manager/archive/master.tar.gz home-manager
+nix-channel --add https://github.com/nix-community/home-manager/archive/refs/heads/release-22.09.tar.gz home-manager
 
 nix-channel --update --verbose
 ```
