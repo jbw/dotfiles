@@ -11,6 +11,7 @@
       glow # markdown preview
       tokei # code statistics
       neovim # text editor
+      wezterm # terminal emulator
 
       # CLI tools
       bat # better `cat`
