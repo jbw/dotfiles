@@ -2,15 +2,13 @@
 
 ## Install
 
-:warning:
-
-### Step 1
+### Install Nix
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/main/install_nix.sh | bash
 ```
 
-### Step 2
+### Install configs
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/main/install_configs.sh | bash
