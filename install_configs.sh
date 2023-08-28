@@ -77,8 +77,8 @@
   }
 
   install_home_manager() {
-    nix-channel --list | grep -q home-manager || {
-      nix-channel --add https://github.com/nix-community/home-manager/archive/refs/heads/release-22.09.tar.gz home-manager
+    nix-channel --list | grep -Q home-manager || {
+      nix-channel --add https://github.com/nix-community/home-manager/archive/refs/heads/release-22.11.tar.gz home-manager
       nix-channel --update
    }
   }

@@ -21,7 +21,21 @@ curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/main/install_configs.s
 ### home-manager
 
 ```
-nix-channel --add https://github.com/nix-community/home-manager/archive/refs/heads/release-22.09.tar.gz home-manager
+nix-channel --add https://github.com/nix-community/home-manager/archive/refs/heads/release-22.11.tar.gz home-manager
 
 nix-channel --update --verbose
+```
+
+
+### Troubleshooting
+
+1. Check nix-info
+
+```
+nix-shell -p nix-info --run "nix-info -m"
+```
+
+2. Do a fresh install
+```
+export JBW_DOTFILES_FRESH_CONFIG_INSTALL=true
 ```

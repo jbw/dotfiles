@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 
-let me = "jbw";
-in {
+let
+  me = "jbw";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
+in
+{
   imports = [ ./darwin <home-manager/nix-darwin> ];
 
   environment.systemPackages = with pkgs; [ home-manager kitty starship ];
