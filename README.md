@@ -18,20 +18,24 @@ curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/main/install_configs.s
 
 ### Troubleshooting
 
-1. Check nix-info
+* Check nix-info
 
-```
+```sh
 nix-shell -p nix-info --run "nix-info -m"
 ```
 
-2. Do a fresh install
-```
+* Do a fresh install
+
+```sh
 export JBW_DOTFILES_FRESH_CONFIG_INSTALL=true
+curl -fsSL ttps://raw.githubusercontent.com/jbw/dotfiles/main/install_configs.sh | bash
 ```
 
-3. Use nixpkg unstable with home-manager master
+* Use `nixpkg` unstable with `home-manager` master
 
-```
+I'm tracking `home-manager@master` and `nixpkgs-unstable`. They both need to track stable or unstable. 
+
+```sh
 sudo nix-channel --add https://nixos.org/channels/nixpkgs-unstable unstable
 sudo nix-channel --update
 ```
