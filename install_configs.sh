@@ -77,12 +77,12 @@
   }
 
   install_home_manager() {
-    nix-channel --list | grep -Q home-manager || {
+    nix-channel --list | grep home-manager || {
       nix-channel --add https://github.com/nix-community/home-manager/archive/refs/heads/release-22.11.tar.gz home-manager
       nix-channel --update
    }
   }
-
+  
   sudo_prompt
   install_nix_darwin
   install_home_manager
