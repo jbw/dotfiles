@@ -39,3 +39,10 @@ nix-shell -p nix-info --run "nix-info -m"
 ```
 export JBW_DOTFILES_FRESH_CONFIG_INSTALL=true
 ```
+
+3. Use nixpkg unstable with home-manager master
+
+```
+sudo nix-channel --add https://nixos.org/channels/nixpkgs-unstable unstable
+sudo nix-channel --update
+```
