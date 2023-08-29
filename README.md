@@ -37,3 +37,9 @@ I'm tracking `home-manager@master` and `nixpkgs-unstable`. They both need to tra
 sudo nix-channel --add https://nixos.org/channels/nixpkgs-unstable unstable
 sudo nix-channel --update
 ```
+
+* Update `nix-darwin`
+```
+nix-channel --update darwin                                                             
+darwin-rebuild changelog
+```
