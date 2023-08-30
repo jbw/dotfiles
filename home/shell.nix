@@ -99,11 +99,18 @@ in
 
   programs.wezterm = {
     enable = true;
-    font = "Fira Code Retina";
-    font_size = 12.0;
-    enable_wayland = true;
-    enable_tab_bar = true;
+
+    extraConfig = ''
+      local wezterm = require 'wezterm'
+      return {
+        
+        font_size = 12.0;
+        enable_wayland = true;
+        enable_tab_bar = true;
+      }
+    '';
   };
+
 
   programs.starship = {
     enable = true;
