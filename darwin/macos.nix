@@ -16,4 +16,7 @@
   system.defaults.NSGlobalDomain.AppleShowAllExtensions = true;
   system.defaults.finder.AppleShowAllExtensions = true;
 
+  # Dock
+  system.defaults.com.apple.dock.autohide = true;
+  system.defaults.com.apple.dock.tilesize = 46;
 }
