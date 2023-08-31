@@ -64,6 +64,10 @@ in
     enableZshIntegration = true;
   };
 
+  programs.neovim = {
+    enable = true;
+  };
+
   programs.zsh = {
     inherit shellAliases;
     enable = true;

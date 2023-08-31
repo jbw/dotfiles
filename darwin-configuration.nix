@@ -13,7 +13,6 @@ in
     home-manager
     starship
     tmux
-    neovim
     vim
     lazygit
     ripgrep
@@ -35,6 +34,7 @@ in
 
   services.nix-daemon.enable = true;
   nix.useDaemon = true;
+  nix.package = pkgs.nix;
 
   system.stateVersion = 4;
 }
