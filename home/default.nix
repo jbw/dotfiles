@@ -10,7 +10,7 @@
       hub # git wrapper
       glow # markdown preview
       tokei # code statistics
-      neovim # text editor
+      # neovim # text editor
       wezterm # terminal emulator
 
       # CLI tools
@@ -48,6 +48,6 @@
   home.stateVersion = "22.05";
 
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  # programs.home-manager.enable = true;
 
 }
