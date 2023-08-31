@@ -26,7 +26,7 @@ nix-shell -p nix-info --run "nix-info -m"
 
 ```sh
 export JBW_DOTFILES_FRESH_CONFIG_INSTALL=true
-curl -fsSL ttps://raw.githubusercontent.com/jbw/dotfiles/main/install_configs.sh | bash
+curl -fsSL https://raw.githubusercontent.com/jbw/dotfiles/main/install_configs.sh | bash
 ```
 
 * Use `nixpkg` unstable with `home-manager` master
