@@ -119,6 +119,13 @@ in
 
 
       -- For example, changing the color scheme:
+      config.window_decorations = "RESIZE|MACOS_FORCE_DISABLE_SHADOW"
+      config.enable_tab_bar = false
+      config.initial_rows = 50
+      config.initial_cols = 200
+      config.audible_bell="Disabled"
+      config.send_composed_key_when_left_alt_is_pressed=true
+      
       config.color_scheme = 'AdventureTime'
 
       -- and finally, return the configuration to wezterm
