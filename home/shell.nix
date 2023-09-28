@@ -113,22 +113,24 @@ in
         config = wezterm.config_builder()
       end
 
-      -- This is where you actually apply your config choices
       config.font = wezterm.font('Hasklig')
       config.font_size = 16.0
 
 
-      -- For example, changing the color scheme:
       config.window_decorations = "RESIZE|MACOS_FORCE_DISABLE_SHADOW"
-      config.enable_tab_bar = false
+
+      config.enable_tab_bar = true
+      config.tab_bar_at_bottom = true
+
       config.initial_rows = 50
       config.initial_cols = 200
+
       config.audible_bell="Disabled"
+
       config.send_composed_key_when_left_alt_is_pressed=true
       
       config.color_scheme = 'AdventureTime'
 
-      -- and finally, return the configuration to wezterm
       return config
 
     '';
