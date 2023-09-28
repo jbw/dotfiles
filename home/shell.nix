@@ -119,8 +119,31 @@ in
 
       config.window_decorations = "RESIZE|MACOS_FORCE_DISABLE_SHADOW"
 
+      config.colors = {
+        tab_bar = {
+          inactive_tab_edge = 'rgba(0% 0% 0% 0%)',
+          background = 'rgba(0% 0% 0% 85%)',
+          active_tab = {
+            bg_color = 'rgba(0% 0% 0% 85%)',
+            fg_color = '#999999'
+          },
+          inactive_tab = {
+            bg_color = 'rgba(0% 0% 0% 85%)',
+            fg_color = '#505050'
+          },
+          new_tab = {
+            bg_color = 'rgba(0% 0% 0% 85%)',
+            fg_color = '#808080'
+          }
+        }
+      }
+      
+      config.use_fancy_tab_bar = false
       config.enable_tab_bar = true
       config.tab_bar_at_bottom = true
+      config.tab_max_width = 15
+      config.hide_tab_bar_if_only_one_tab = true
+      config.show_new_tab_button_in_tab_bar = false
 
       config.initial_rows = 50
       config.initial_cols = 200
