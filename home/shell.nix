@@ -154,6 +154,22 @@ in
       
       config.color_scheme = 'AdventureTime'
 
+      -- Keybindings
+
+      config.keys = {
+        {
+          key = 'Enter',
+          mods = 'SUPER|CTRL',
+          action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+        },  
+        {
+          key = 'Enter',
+          mods = 'SUPER',
+          action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+        },
+
+      }
+
       return config
 
     '';
