@@ -28,6 +28,8 @@
       bottom # better `top`
       tealdeer # rust implementation of `tldr`
       diff-so-fancy # better `diff`
+      shellcheck # shell script linter
+      neofetch # system info
 
       # Development tools
       yarn
@@ -35,10 +37,18 @@
       go
       fnm
 
+      # Ruby
+      ruby
+      rbenv # ruby version manager
+      solargraph # ruby language server
+      
+
+
     ] ++ (with nodePackages; [
       # NPM Packages
       neovim # neovim nodejs provider
       prettier # code formatter
+      jsonlint
 
     ]) ++ lib.optionals stdenv.isDarwin [
       m-cli # useful macos CLI commands
