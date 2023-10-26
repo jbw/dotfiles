@@ -48,7 +48,7 @@
       # NPM Packages
       neovim # neovim nodejs provider
       prettier # code formatter
-      jsonlint
+      jsonlint 
 
     ]) ++ lib.optionals stdenv.isDarwin [
       m-cli # useful macos CLI commands
