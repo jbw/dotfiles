@@ -39,7 +39,15 @@ sudo nix-channel --update
 ```
 
 * Update `nix-darwin`
+
 ```
 nix-channel --update darwin                                                             
 darwin-rebuild changelog
+```
+
+* Update packages
+
+For example, installing neovim
+```
+nix-env -iA nixpkgs.neovim
 ```
