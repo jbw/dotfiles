@@ -152,7 +152,7 @@ in
 
       config.send_composed_key_when_left_alt_is_pressed=true
       
-      config.color_scheme = 'AdventureTime'
+      config.color_scheme = 'tokyonight'
 
       -- Keybindings
 
