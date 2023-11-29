@@ -9,14 +9,14 @@
       home-manager # system package manager
       hub # git wrapper
       glow # markdown preview
-      tokei # code statistics
+      # tokei # code statistics
       neovim # text editor
       wezterm # terminal emulator
 
       # CLI tools
       bat # better `cat`
       fd # better `find`
-      exa # better `ls`
+      eza # better `ls`
       htop # better `top`
       mosh # better `ssh`
       procs # better `ps`

@@ -1,7 +1,6 @@
 {}:
 
 [
-  "cfn-lint",
-
+  "cfn-lint"
   "pinentry-mac"
 ]
