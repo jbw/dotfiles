@@ -12,6 +12,11 @@ in {
     tig
     gh
   ];
+  
+  programs.atuin = {
+    enable = true;
+    flags = ["--disable-up-arrow"];
+  };
 
   programs.git = {
     enable = true;

@@ -3,7 +3,7 @@
 let
   shellAliases = {
     cat = "bat --style=plain";
-    ls = "exa";
+    ls = "eza";
 
     ll = "ls -la";
     l = "ls -l";
@@ -12,7 +12,7 @@ let
     find = "fd";
 
     oo = "open .";
-    tree = "exa --tree";
+    tree = "eza --tree";
 
     # Git 
     git = "hub";
@@ -55,7 +55,7 @@ let
 in
 {
   home.packages = with pkgs; [
-    fzf # fuzzy matches
+    fzf # fuzzy matches, used by gitIdentity script
     zoxide # better cd
   ];
 
