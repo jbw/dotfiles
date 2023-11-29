@@ -42,6 +42,9 @@ in {
 
     };
 
+    userName = "jbw";
+    userEmail = "hi@jbw.codes";
+
     extraConfig = {
       commit.template = builtins.toPath ./git-message;
       hub.protocol = "ssh";
