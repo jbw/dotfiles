@@ -41,7 +41,7 @@ sudo nix-channel --update
 * Update `nix-darwin`
 
 ```
-nix-channel --update darwin                                                             
+nix-channel --update darwin 
 darwin-rebuild changelog
 ```
 
