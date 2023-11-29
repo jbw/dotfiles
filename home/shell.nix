@@ -18,6 +18,7 @@ let
     git = "hub";
     # "https://jonsuh.com/blog/git-command-line-shortcuts/"
     ga = "git add";
+    gap = "git add --patch";
     gaa = "git add .";
     gaaa = "git add --all";
     gau = "git add --update";
@@ -29,6 +30,7 @@ let
     gco = "git checkout";
     gcob = "git checkout -b";
     gd = "git diff";
+    gds = "git diff --staged";
     gda = "git diff HEAD";
     gi = "git init";
     glg = "git log --graph --oneline --decorate --all";
@@ -67,7 +69,10 @@ in
   programs.zsh = {
     inherit shellAliases;
     enable = true;
-
+    enableAutosuggestions = true;
+    enableCompletion = true;
+    history.extended = true;
+  
     initExtra = ''
       # Initialize homebrew
       eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -90,9 +95,6 @@ in
       bindkey "^[[1;9C" end-of-line
     '';
 
-    enableAutosuggestions = true;
-    enableCompletion = true;
-    history.extended = true;
   };
 
   programs.gpg = { enable = true; };
