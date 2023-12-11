@@ -8,6 +8,9 @@
   "visual-studio-code"
   "wireshark"
   "github"
+ 
+  # Work Tools
+  "powershell"
 
   # Communication Tools
   "discord"
