@@ -115,7 +115,7 @@ in
         config = wezterm.config_builder()
       end
 
-      config.font = wezterm.font('Hasklig')
+      config.font = wezterm.font('agave', { weight = 450 })
       config.font_size = 16.0
 
 
