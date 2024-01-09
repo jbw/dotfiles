@@ -116,7 +116,7 @@ in
       end
 
       config.font = wezterm.font('agave', { weight = 450 })
-      config.font_size = 16.0
+      config.font_size = 18.0
 
 
       config.window_decorations = "RESIZE|MACOS_FORCE_DISABLE_SHADOW"
